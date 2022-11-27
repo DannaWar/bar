@@ -1,0 +1,18 @@
+{% extends 'body.html' %}
+{% load bootstrap5 %}
+{% bootstrap_messages%}
+
+ {% block title %} Iniciar Sesión {% endblock title %}
+
+{% block content %}
+
+<h1 class="text-center" style="color:white"> Inicio Sesión  </h1>
+<div class="mx-auto w-50 " style="color:white"> 
+    <form method="post" style="width:50%; height:70vh">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button type="submit" class="btn btn-success">Iniciar Sesión</button>
+    </form>
+</div>
+
+{% endblock content %}

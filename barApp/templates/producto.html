@@ -1,0 +1,93 @@
+{%  extends 'body.html' %}
+{% load static %}
+{% block title %} Productos{% endblock title %}
+
+{% block content %}
+
+<div class="row justify-content-center align-items-center" >
+    <div class="col-5">
+        <div class="align-middle mx-5">
+            <h1 class="text-center mx-5" style="color:white">Productos</h1>
+            <p class="text-center mx-5" style="color:white"> Acá hay muchos productos con extracto de café y agua-ardiente</P>
+        </div>        
+    </div>
+    <div class="col-7">
+        <img src=" {% static "imagenes/bebida.jpg"%}" width=100% >
+    </div>
+</div>
+<div class="container">
+    <h1 class="text-center mt-4" style="color:white">Bebidas frías</h1>
+    <div class="row my-4">
+        
+    {% for producto in product_cold %}
+    <div class="col-4 ">
+    <div class="card my-3 mx-2" >
+        <img src="{{producto.imagen_P.url}}" class="card-img-top" alt="">
+        <div class="card-body">
+            <h5 class="card-title">{{producto.nombre_P}}</h5>
+            <p class="card-text">{{producto.descripcion_P}}</p>
+            <p class="card-text text-end"><small class="text-muted">${{producto.precio_P}}</small></p>
+        </div>
+        <div class="card-footer text center">
+            <a href=" {% url 'carro:agregar' producto.id %}" class="btn btn-success">Agregar</a>
+        </div>
+    </div>
+    </div>
+    {% endfor %}
+    <p class="text-end"><a class="btn border border-ligth px-3" style=" color:white" href=" {% url "cold" %}" > Ver más </a></p>
+</div>
+
+<hr>
+
+<h1 class="text-center mt-3" style="color:white">Bebidas calientes</h1>
+    <div class="row my-4">
+        <div class="container">"
+            div style="float:right;"
+            <p style="color: white;">Texto de prueba</p>
+        </div>
+    {% for producto in product_hot %}
+    <div class="col-4 ">
+    <div class="card my-3 mx-2" >
+        <img src="{{producto.imagen_P.url}}" class="card-img-top" alt="">
+        <div class="card-body">
+            <h5 class="card-title">{{producto.nombre_P}}</h5>
+            <p class="card-text">{{producto.descripcion_P}}</p>
+            <p class="card-text text-end"><small class="text-muted">${{producto.precio_P}}</small></p>
+        </div>
+        <div class="card-footer text center">
+            <a href="#" class="btn btn-success">Agregar</a>
+        </div>
+    </div>
+    </div>
+    {% endfor %}
+    <p class="text-end"><a class="btn border border-ligth px-3" style=" color:white" href= "{% url "hot"%}">Ver más</a></p>
+</div>
+
+<hr>
+
+<h1 class="text-center mt-3" style="color:white">Alimentos</h1>
+    <div class="row my-4">
+        <div class="container">"
+            div style="float:right;"
+            <p style="color: white;">Texto de prueba</p>
+        </div>
+    {% for producto in product_food %}
+    <div class="col-4 ">
+    <div class="card my-3 mx-2" >
+        <img src="{{producto.imagen_P.url}}" class="card-img-top" alt="">
+        <div class="card-body">
+            <h5 class="card-title">{{producto.nombre_P}}</h5>
+            <p class="card-text">{{producto.descripcion_P}}</p>
+            <p class="card-text text-end"><small class="text-muted">${{producto.precio_P}}</small></p>
+        </div>
+        <div class="card-footer text center">
+            <a href="#" class="btn btn-success">Agregar</a>
+        </div>
+    </div>
+    </div>
+    {% endfor %}
+    <p class="text-end"><a class="btn border border-ligth px-3" style=" color:white" href="{% url "food" %}"> Ver más </a></p>
+</div>
+</div>
+
+{% endblock content%}

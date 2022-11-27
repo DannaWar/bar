@@ -1,0 +1,45 @@
+{% extends 'body.html' %}
+{% load static %}
+{% block title %}Bebidas frías{% endblock title %}
+
+{% block content %}
+
+
+
+<div style="position:absolute; border:white 0.7px solid; padding-top: 0.8em; width:34%; left:33%; top:50%; z-index:100; font-family:san-serif">
+
+  <h2 style="color:white; text-align:center; font-size:3.5em">Bebidas frías</h2>
+
+</div>
+<img src="{% static "imagenes/beers.jpg" %}" width="100%">
+<div class="bg-image"></div>
+
+
+<div style="position:absolute; top: 20%; left:10%; width:80%; border:1px dotted #0c0c0c; padding: 15em 30em; filter: blur(0.5px);
+  -webkit-filter: blur(1px); background-color: rgba(0, 0, 0, 0.308);">
+</div>
+
+
+
+<div class="container">
+    <div class="row my-4 ">
+        {% for producto in productos %}
+        <div class="col-4 ">
+        <div class="card my-3 mx-2">
+            <img src="{{ producto.imagen_P.url}}" class="card-img-top" alt="">
+            <div class="card-body ">
+                <h5 class="card-title">{{producto.nombre_P}}</h5>
+                <p class="card-text">{{producto.descripcion_P}}</p>
+                <p class="card-text text-end"><small class="text-muted">${{producto.precio_P}}</small></p>
+            </div>
+            <div class="card-footer text center">
+              <a href=" {% url 'carro:agregar' producto.id %}" class="btn btn-success">Agregar</a>
+          </div>
+        </div>
+        </div>
+        {% endfor %} 
+    </div>
+</div>
+    
+
+{% endblock %}

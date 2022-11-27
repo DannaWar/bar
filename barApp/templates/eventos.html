@@ -1,0 +1,56 @@
+{% extends 'body.html' %}
+
+{% load static %}
+
+{% block title %}Eventos{% endblock  %}
+
+{% block content  %}
+    
+
+        <div class="row">
+           
+            <div  class="mx-auto w-50 "class="col-9">
+                <img src=" {% static "imagenes/concierto.jpg" %}" width=100%>
+            </div>
+        
+            <div class="col-6">
+                <h4 class="text-center" style="color:white">Concierto café bar Oh la lá </h1>
+                    <br>
+                <h5 style="color:white"> <strong >Artista invitado: </strong>Manuel López </h3>
+                    <p style="color:white"> Es un concierto benefico, que se realizará con el propósito de recolectar fondos para un hogar para los perros de la calle</p>
+                <p> hora:6:00 pm </p>
+               
+                
+            </div>
+            <div class="col-4" class="mx-auto w-10" >
+                <img src=" {% static "imagenes/evento1.jpg" %}" width=100%>
+            </div>
+            <div class="col-4" class="mx-auto w-10" >
+                <img src=" {% static "cafe-15.jpg" %}" width=100%>
+            </div>
+            <div class="col-4" class="mx-auto w-10" >
+                <img src=" {% static "imagenes/evento2.jpg" %}" width=100%>
+            </div>
+            
+            <br>
+            <div class="col-12">
+                <h4 class="text-center" style="color:white"> Evento de música y café </h1>
+                    <br>
+                <h5 class="text-center" style="color:white"> <strong >Horario </strong></h3>
+                    <p class="text-center" style="color:white"> Inicio: 6:00 pm</p>
+                <p class="text-center" style="color:white"> Cierre: 11:00 pm </p>
+            <p class="text-center" style="color:white"> Evento música y café, donde estaremos en una clase de pintura disfrutando del café Pueblorriqueño</p>
+            
+           
+            {% comment %} <div class="col-3">
+                <img src=" {% static "imagenes/cafe-3.jpg" %}" width=100%>
+            </div>
+            <div class="col-3">
+                <img src=" {% static "imagenes/concierto.jpg" %}" width=100%>
+            </div> {% endcomment %}
+        </div>
+    </div>
+
+
+{% endblock  %}
+

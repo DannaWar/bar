@@ -1,0 +1,20 @@
+{% extends 'body.html' %}
+{% load bootstrap5 %}
+{% bootstrap_messages%}
+{% load static %}
+{% block title %}Contacto{% endblock title %}
+
+
+
+{% block content %}
+<h1 class="text-center" style="color:white"> Contacto </h1>
+<div class="mx-auto w-50 " style="color:white"> 
+    <form method="post" style="width:65%">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button type="submit" class="btn btn-success">Contacto</button>
+    </form>
+</div>
+
+
+{% endblock %}

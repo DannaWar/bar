@@ -1,0 +1,55 @@
+{% extends 'body.html' %}
+{% load static %}
+{% block title %}
+    Oh la lá
+{% endblock %}
+
+{% block content %}
+<div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <img src="{% static "imagenes/barista.jpg" %}" class="w-100 d-block  mx-auto"  style="height:90vh" alt="First slide">
+            
+        </div>
+        <div class="carousel-item">
+            <img src="{% static "imagenes/cafe-3.jpg" %}" class="w-100  mx-auto d-block" style="height:90vh" alt="Second slide">
+            
+        </div>
+        <div class="carousel-item">
+            <img src="{% static "cafe-16.jpg" %}" class="w-100 mx-auto d-block" style="height:90vh" alt="Third slide">
+        </div>
+    </div>
+
+    <div style="position:absolute; top:30em; left:33em;">
+        <div class="d-grid gap-2 mx-auto" style="width: 15em;">
+            <a href="{% url "nosotros"%}" class="btn" style="background-color:  #e5c2ac; font-size:1.5em">Sobre nosotros</a>
+        </div>
+    </div>
+
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<br>
+<h5 class="text-center" style="color:white"> <strong >Horario </strong></h3>
+    <p class="text-center" style="color:white"> Apertura: 8:00 pm</p>
+<p class="text-center" style="color:white"> Cierre: 9:00 pm </p>
+
+
+<br>
+<div class="w-50 m-auto">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7938.926011119798!2d-75.84196316931154!3d5.790083080732865!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e465baff299098b%3A0xa9b56b238d679ba8!2zT2ggbGEgbMOh!5e0!3m2!1ses-419!2sco!4v1669472767266!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<br>
+{% endblock %}

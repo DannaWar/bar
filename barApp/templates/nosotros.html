@@ -1,0 +1,47 @@
+{% extends 'body.html' %}
+{% load static %}
+{% block title %}Sobre nosotros{% endblock title %}
+
+
+
+{% block content %}
+
+<div class="container">
+    <h1 class="text-center" style="color:white"> Sobre Nosotros</h1>
+<br>
+
+<p style="color:white"> La página “Sobre nosotros” o “quiénes somos” es la sección o categoría de una web que resume a modo descriptivo cómo nació el negocio, quiénes forman parte del equipo responsable y, sobre todo, explica la misión, visión y valores de dicho negocio en Internet.
+
+    Aclarado esto, seguro que ahora comprendes un poco mejor la importancia que tiene dentro de un sitio web esta página, sobre todo para aquellos que te visitan y aún no conocen tu eCommerce.
+    
+    Sin embargo, es probable que si tienes una tienda online, te pase como a la mayoría de los responsables de este tipo de negocios y te cueste cierto trabajo hablar sobre ti mismo y sobre tu equipo.
+    
+    ¿Te ha pasado aquello de poderte pasar todo el día delante de una página en blanco y con solo pensar en contar algo sobre ti, te bloqueas?
+    
+    Es por eso por lo que a buen seguro la página "Sobre nosotros" de tu eCommerce sigue sin estar acabada o escrita de manera muy similar al del resto y, sobre todo, sin la personalidad y esencia que buscan aquellos que deciden leerla.
+    
+</p>
+
+<br>
+    
+<div>
+    <div class="d-grid gap-2 mx-auto" style="width: 15em;">
+        <a href="{% url "contacto" %}" class="btn" style="background-color: #e5c2ac; font-size:1.1em">Contáctenos</a>
+    </div>
+<br>
+
+     <img src="{% static "cafe-16.jpg" %}" class="w-100 mx-auto d-block" style="height:90vh" alt="Third slide">
+     <div class="" style="width: 15em; background-color: #e5c2ac; position:absolute; top:50em">
+        
+        <p> Email </p>
+        <p>dannausma08@gmail.com</p>
+        <p>WhatsApp</p>
+        <p>3126622786</p>
+        <p>Ubicación</p>
+        <p>Pueblorrico</p>
+
+    </div>
+</div>
+</div>
+
+{% endblock %}
