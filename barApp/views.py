@@ -57,3 +57,11 @@ def contacto (request):
             data["form"] = formulario
             
     return render(request, 'contacto.html', data)
+
+def cafe (request):
+    return render(request, 'cafe.html')
+
+
+def galeria(request):
+    
+    return render(request, 'galeria.html')

@@ -23,4 +23,5 @@ urlpatterns = [
     path("",include ("barApp.urls") ), 
     path("", include("login.urls")),
     path("", include("ventas.urls")),
+    path("", include("pedidos.urls")), 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

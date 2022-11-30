@@ -1,0 +1,11 @@
+{% extends 'body.html' %}
+
+{% block title %}Trabajador{% endblock title %}
+{% block content %}
+
+{% if user.is_authenticated %}
+{{user.username}}
+<a href="{% url "crear_producto" %}" class="btn btn-success">Registrar producto</a>
+{% endif %}
+<h1>Usuario</h1>
+{% endblock content %}

@@ -1,0 +1,46 @@
+{% extends 'body.html' %}
+{% block title %}
+Reportes ventas 
+{% endblock %}
+{% block content %}
+<div class=" mx-5">
+    <h2 class="text-center pt-4" style="color:white; font-family:san-serif">Reporte de las ventas</h2>
+    <table class="border border-dark bg-secondary">
+        <thead>
+            <colgroup>
+                <col style="width: 10%"/>
+                <col style="width: 20%"/>
+                <col style="width: 20%"/>
+                <col style="width: 10%"/> 
+                <col style="width: 10%"/>
+                <col style="width: 30%"/>
+                <col style="width: 10%"/>                        
+            </colgroup>  
+        </thead>
+        <tbody class="">
+            <tr class="border border-dark text-center">
+                <td class="text-center">Vendedor</td>
+                <td>Producto</td>
+                <td>Venta Nro. </td>
+                <td>Cantidad</td>
+                <td>Fecha venta</td>
+                <td>Precio total</td>
+            </tr>
+            {% for v in ventas %}            
+            
+            <tr class="text-center">
+            <td>{{v.user}}</td>
+            <td>{{v.producto.nombre_P}}</td>
+            <td>{{v.pedido}}</td>
+            <td>{{v.cantidad}}</td>
+            <td>{{v.created_at}}</td> 
+            <td>{{v.total}}</td> 
+                        
+            {% endfor %}
+        </tr>
+                        
+        </tbody>
+    </table>    
+</div>
+
+{% endblock content %}

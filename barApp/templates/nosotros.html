@@ -1,25 +1,21 @@
 {% extends 'body.html' %}
 {% load static %}
-{% block title %}Sobre nosotros{% endblock title %}
+{% block title %}Somos{% endblock title %}
 
 
 
 {% block content %}
 
 <div class="container">
-    <h1 class="text-center" style="color:white"> Sobre Nosotros</h1>
+    <h1 class="text-center" style="color:white"> ¿Quiénes somos? </h1>
 <br>
-
-<p style="color:white"> La página “Sobre nosotros” o “quiénes somos” es la sección o categoría de una web que resume a modo descriptivo cómo nació el negocio, quiénes forman parte del equipo responsable y, sobre todo, explica la misión, visión y valores de dicho negocio en Internet.
-
-    Aclarado esto, seguro que ahora comprendes un poco mejor la importancia que tiene dentro de un sitio web esta página, sobre todo para aquellos que te visitan y aún no conocen tu eCommerce.
-    
-    Sin embargo, es probable que si tienes una tienda online, te pase como a la mayoría de los responsables de este tipo de negocios y te cueste cierto trabajo hablar sobre ti mismo y sobre tu equipo.
-    
-    ¿Te ha pasado aquello de poderte pasar todo el día delante de una página en blanco y con solo pensar en contar algo sobre ti, te bloqueas?
-    
-    Es por eso por lo que a buen seguro la página "Sobre nosotros" de tu eCommerce sigue sin estar acabada o escrita de manera muy similar al del resto y, sobre todo, sin la personalidad y esencia que buscan aquellos que deciden leerla.
-    
+<div class="container">
+    <h1 class="text-center" style="color:white"> Oh la lá</h1>
+    <h1 class="text-center" style="color:white">Nuestra historia</h1>
+<br>
+<p style="color:white"> Somos un negocio de cafetería y bar, Oh la lá es el resultado de una iniciativa 
+    que surgió tras una taza de café Colombiano y el anhelo de promocionar nuestro municipio a través de nuestras
+    raíces cafeteras.
 </p>
 
 <br>
@@ -31,17 +27,79 @@
 <br>
 
      <img src="{% static "cafe-16.jpg" %}" class="w-100 mx-auto d-block" style="height:90vh" alt="Third slide">
-     <div class="" style="width: 15em; background-color: #e5c2ac; position:absolute; top:50em">
+     <div class="p-5" style="width: 20em; background-color: hsl(23, 52%, 79%,0.6); position:absolute; top:140em;left:50em;">
         
         <p> Email </p>
         <p>dannausma08@gmail.com</p>
-        <p>WhatsApp</p>
+        <p>WhattsApp</p>
         <p>3126622786</p>
         <p>Ubicación</p>
         <p>Pueblorrico</p>
 
     </div>
 </div>
-</div>
 
+<br><br>
+
+<h1 style="color:white">¿Cuál es nuestro propósito?</h1>
+<br><br>
+<div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <img src="{% static "imagenes/hot1.jpg" %}" class="mx-auto w-100 d-block" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Lo que hacemos</h3>
+                <p>No vendemos café, vendemos historias, conversaciones, momentos...</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static "imagenes/cafe23.jpg"%}" class="w-100 d-block" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Nuestra misión</h3>
+                <p>Impulsar la economía del municipio por medio del café, de sus procesos y de todo lo que hay detrás de ello</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static "imagenes/cafe24.jpg" %}" class="w-100 d-block" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Nuestra visión</h3>
+                <p>Explorar el café a través de los productos y la comercialización</p>
+            </div>
+        </div>
+    </div>
+    
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<br><br>
+<h1 style="color:white">¿Por qué visitarnos?</h1>
+<br><br>
+<p  class="text-center" style="color:white">En nuestro café queremos potenciar el agro Pueblorriqueño, ofreciendo con nuestros productos en diversas presentaciones
+    diversificando el café, la cultura campesina de nuestro municipio y haciendo un reconocimiento al arduo trabajo realizado
+    por todos los campesinos; los procesos existentes para la preparación del café a nuestro consumino. Nosotros, Oh la lá
+    queremos ser y hacerlos a todos parte de ello.
+</p>
+<br><br>
+
+</div>
+<div class="col-4" class="mx-auto w-10" >
+    <img src=" {% static "imagenes/colombia5.jpg" %}" width=100%>
+</div>
+<div class="col-4" class="mx-auto w-10" >
+    <img src=" {% static "imagenes/colombia7.jpg" %}" width=100%>
+</div>
+<div class="col-4" class="mx-auto w-10" >
+    <img src=" {% static "imagenes/colombia4.jpg" %}" width=100%>
+</div>
 {% endblock %}
